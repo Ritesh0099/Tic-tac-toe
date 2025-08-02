@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_gradient"
+    android:gravity="center_horizontal">
+
+    <!-- Scoreboard -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/playerXScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Player X: 0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/playerOScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Player O: 0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Game Board -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_marginBottom="32dp">
+
+        <!-- Buttons (3x3) styled with new style -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button00"
+            style="@style/TicTacToeButton" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button01"
+            style="@style/TicTacToeButton" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button02"
+            style="@style/TicTacToeButton" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button10"
+            style="@style/TicTacToeButton" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button11"
+            style="@style/TicTacToeButton" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button12"
+            style="@style/TicTacToeButton" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button20"
+            style="@style/TicTacToeButton" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button21"
+            style="@style/TicTacToeButton" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button22"
+            style="@style/TicTacToeButton" />
+    </GridLayout>
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn: Player X"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Reset Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Game"
+        android:textColor="#3949AB"
+        android:backgroundTint="#FFFFFF"
+        app:cornerRadius="20dp"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="14dp"
+        android:elevation="4dp" />
+</LinearLayout>
